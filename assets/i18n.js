@@ -87,7 +87,6 @@ const I18N = {
     'faq2.a': 'Supercycl은 브라우저에서 바로 쓰는 앱이라 앱스토어에 없습니다. 위의 ⑥ 앱 설치하기 방법으로 홈 화면에 추가해 주세요.',
     'faq3.q': '알림이 오지 않아요.',
     'faq3.a': 'Profile → Notifications에서 알림이 켜져 있는지 확인하세요. iPhone은 iOS 16.4 이상에서 홈 화면에 추가한 경우에만 알림을 받을 수 있습니다.',
-    'footer.help': '도움이 필요하시면 Supercycl 고객센터로 문의해 주세요.',
   },
   en: {
     'header.title': 'User Guide',
@@ -175,7 +174,6 @@ const I18N = {
     'faq2.a': "Supercycl runs right in your browser, so it isn't in the app stores. Add it to your home screen using the steps in ⑥ Install the App above.",
     'faq3.q': "I'm not receiving notifications.",
     'faq3.a': 'Check Profile → Notifications and make sure alerts are enabled. On iPhone, notifications only work on iOS 16.4 or later when Supercycl is opened from the home-screen icon.',
-    'footer.help': 'Need help? Contact Supercycl customer support.',
   },
 };
 
