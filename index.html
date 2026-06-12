@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Supercycl 사용 가이드</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/guide.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">Supercycl <span class="brand-sub" data-i18n="header.title">사용 가이드</span></div>
+    <div class="current-section" id="currentSection" aria-live="polite"></div>
+    <div class="lang-toggle" role="group" aria-label="언어 선택 / Language">
+      <button type="button" class="lang-btn active" data-lang="ko" onclick="setLang('ko')">한국어</button>
+      <button type="button" class="lang-btn" data-lang="en" onclick="setLang('en')">English</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- 인트로 -->
+  <section class="hero" id="sec-intro">
+    <h1 data-i18n="intro.title">Supercycl이 처음이신가요?</h1>
+    <p class="lead" data-i18n="intro.body">Supercycl(슈퍼사이클)은 여러 거래소를 한 곳에서 편리하게 거래할 수 있는 서비스입니다. 이 가이드는 처음 시작하는 분도 따라 할 수 있도록 실제 화면과 함께 차근차근 안내해 드립니다.</p>
+    <p class="hint" data-i18n="intro.hint">아래 목차에서 궁금한 항목을 누르면 해당 설명으로 바로 이동합니다.</p>
+  </section>
+
+  <!-- 목차 -->
+  <nav class="toc" aria-label="목차">
+    <h2 data-i18n="toc.heading">무엇이 궁금하세요?</h2>
+    <div class="toc-grid">
+      <a class="toc-card" href="#sec-onboarding">
+        <span class="toc-num">1</span>
+        <span class="toc-text"><strong data-i18n="toc1.title">시작하기</strong><small data-i18n="toc1.sub">로그인부터 거래소 연결까지</small></span>
+      </a>
+      <a class="toc-card" href="#sec-markets">
+        <span class="toc-num">2</span>
+        <span class="toc-text"><strong data-i18n="toc2.title">Markets</strong><small data-i18n="toc2.sub">시세 확인하기</small></span>
+      </a>
+      <a class="toc-card" href="#sec-trade">
+        <span class="toc-num">3</span>
+        <span class="toc-text"><strong data-i18n="toc3.title">Trade</strong><small data-i18n="toc3.sub">주문하기</small></span>
+      </a>
+      <a class="toc-card" href="#sec-portfolio">
+        <span class="toc-num">4</span>
+        <span class="toc-text"><strong data-i18n="toc4.title">Portfolio</strong><small data-i18n="toc4.sub">내 자산 확인</small></span>
+      </a>
+      <a class="toc-card" href="#sec-profile">
+        <span class="toc-num">5</span>
+        <span class="toc-text"><strong data-i18n="toc5.title">Profile</strong><small data-i18n="toc5.sub">설정 관리</small></span>
+      </a>
+      <a class="toc-card" href="#sec-install">
+        <span class="toc-num">6</span>
+        <span class="toc-text"><strong data-i18n="toc6.title">앱 설치하기</strong><small data-i18n="toc6.sub">홈 화면에 추가</small></span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ① 시작하기 (온보딩) -->
+  <section id="sec-onboarding">
+    <h2><span class="sec-num">1</span> <span data-i18n="ob.heading">시작하기 — 처음 5단계</span></h2>
+    <p class="lead" data-i18n="ob.lead">Supercycl을 처음 사용할 때는 아래 5단계만 따라 하면 됩니다. 10분이면 충분해요.</p>
+
+    <article class="step-card">
+      <div class="step-head"><span class="step-badge">1</span><h3 data-i18n="s1.title">로그인하기</h3></div>
+      <p data-i18n="s1.body">앱을 열면 가장 먼저 로그인 화면이 나타납니다. 세 가지 방법 중 편한 것을 선택하세요.</p>
+      <ul>
+        <li data-i18n="s1.li1">이메일 — 이메일 주소로 가입하고 로그인합니다.</li>
+        <li data-i18n="s1.li2">Google — 구글 계정으로 한 번에 로그인합니다.</li>
+        <li data-i18n="s1.li3">QR 코드 — 다른 기기에서 QR을 스캔해 로그인합니다.</li>
+      </ul>
+      <figure class="phone"><img src="images/scr-001.png" alt="Supercycl 로그인 화면" data-i18n-alt="s1.alt" loading="lazy"></figure>
+    </article>
+
+    <article class="step-card">
+      <div class="step-head"><span class="step-badge">2</span><h3 data-i18n="s2.title">거래소 연결 안내 화면</h3></div>
+      <p data-i18n="s2.body">로그인하면 '거래소를 연결하세요(Connect Your Exchange)' 화면이 나타납니다. Supercycl은 거래소 계정을 연결해야 거래할 수 있는 서비스이기 때문에, 이 단계가 가장 중요합니다. 'Connect Now' 버튼을 눌러주세요.</p>
+      <div class="note note-warn"><span class="note-icon">⚠️</span><p data-i18n="s2.warn">'Skip for now(나중에 하기)'를 누르면 화면을 둘러볼 수는 있지만 거래는 할 수 없습니다. 꼭 거래소를 연결해 주세요.</p></div>
+      <figure class="phone">
+        <img src="images/scr-807.png" alt="거래소 연결 안내 화면" data-i18n-alt="s2.alt" loading="lazy">
+        <span class="tap-label" style="--tap-y: 84%" data-i18n="s2.tap">여기를 누르세요</span>
+      </figure>
+    </article>
+
+    <article class="step-card">
+      <div class="step-head"><span class="step-badge">3</span><h3 data-i18n="s3.title">거래소 선택하기</h3></div>
+      <p data-i18n="s3.body">연결할 수 있는 거래소 목록이 나타납니다. 지금은 OKX 거래소만 연결할 수 있고, 나머지 거래소는 곧 지원될 예정(Coming Soon)입니다. 목록에서 OKX를 눌러주세요.</p>
+      <figure class="phone"><img src="images/scr-812.png" alt="거래소 목록 화면" data-i18n-alt="s3.alt" loading="lazy"></figure>
+    </article>
+
+    <article class="step-card">
+      <div class="step-head"><span class="step-badge">4</span><h3 data-i18n="s4.title">연결 승인하기</h3></div>
+      <p data-i18n="s4.body">Supercycl이 어떤 권한을 사용하는지 보여주는 화면입니다. 내용을 확인한 뒤 'Connect with OKX' 버튼을 누르면 OKX 로그인 페이지로 이동합니다. OKX 계정으로 로그인하고 승인하면 연결이 끝납니다.</p>
+      <div class="note note-safe"><span class="note-icon">🔒</span><p data-i18n="s4.safe">안심하세요 — Supercycl은 거래에 필요한 권한만 요청하며, 출금 권한은 요청하지 않습니다. 연결은 언제든지 해제할 수 있습니다.</p></div>
+      <figure class="phone">
+        <img src="images/scr-801.png" alt="연결 승인 화면" data-i18n-alt="s4.alt" loading="lazy">
+        <span class="tap-label" style="--tap-y: 84%" data-i18n="s4.tap">여기를 누르세요</span>
+      </figure>
+    </article>
+
+    <article class="step-card">
+      <div class="step-head"><span class="step-badge">5</span><h3 data-i18n="s5.title">연결 완료 — 이제 시작!</h3></div>
+      <p data-i18n="s5.body">연결이 끝나면 완료 화면이 잠시 보였다가 거래(Trade) 화면으로 이동합니다. 이 화면이 Supercycl의 기본 화면입니다. 화면 아래쪽에는 Markets · Trade · Portfolio · Profile 네 개의 탭이 있습니다.</p>
+      <div class="note note-info"><span class="note-icon">💡</span><p data-i18n="s5.tip">이때 '홈 화면에 추가' 안내가 자동으로 나타날 수 있어요. 앱처럼 편하게 쓰려면 추가하는 것을 추천합니다. 자세한 방법은 아래 ⑥ 앱 설치하기를 참고하세요.</p></div>
+      <div class="phone-pair">
+        <figure class="phone"><img src="images/scr-802.png" alt="연결 완료 화면" data-i18n-alt="s5.alt1" loading="lazy"></figure>
+        <figure class="phone"><img src="images/scr-102.png" alt="거래 기본 화면" data-i18n-alt="s5.alt2" loading="lazy"></figure>
+      </div>
+    </article>
+  </section>
+
+  <!-- ② Markets -->
+  <section id="sec-markets">
+    <h2><span class="sec-num">2</span> <span data-i18n="mk.heading">Markets — 시세 확인하기</span></h2>
+    <p data-i18n="mk.body">Markets 탭에서는 거래할 수 있는 모든 종목의 실시간 가격을 볼 수 있습니다.</p>
+    <ul>
+      <li data-i18n="mk.li1">위쪽 검색창에서 종목 이름(예: BTC)을 검색할 수 있습니다.</li>
+      <li data-i18n="mk.li2">종목을 누르면 바로 거래 화면으로 이동합니다.</li>
+    </ul>
+    <figure class="phone"><img src="images/scr-301.png" alt="Markets 시세 화면" data-i18n-alt="mk.alt" loading="lazy"></figure>
+  </section>
+
+  <!-- ③ Trade -->
+  <section id="sec-trade">
+    <h2><span class="sec-num">3</span> <span data-i18n="tr.heading">Trade — 주문하기</span></h2>
+    <p data-i18n="tr.body">Trade 탭은 실제로 사고파는 화면입니다. 처음에는 꼭 필요한 것만 보이는 간단한 주문 화면이 표시됩니다.</p>
+    <ul>
+      <li data-i18n="tr.li1">금액(Amount)과 배율(Leverage)을 정한 뒤 매수(Long) 또는 매도(Short) 버튼을 누릅니다.</li>
+      <li data-i18n="tr.li2">주문 전 확인 화면에서 내용을 다시 한 번 확인할 수 있습니다.</li>
+    </ul>
+    <div class="note note-warn"><span class="note-icon">⚠️</span><p data-i18n="tr.warn">선물 거래는 원금 손실 위험이 있습니다. 처음에는 작은 금액으로 연습해 보세요.</p></div>
+    <figure class="phone"><img src="images/scr-102.png" alt="Trade 주문 화면" data-i18n-alt="tr.alt" loading="lazy"></figure>
+  </section>
+
+  <!-- ④ Portfolio -->
+  <section id="sec-portfolio">
+    <h2><span class="sec-num">4</span> <span data-i18n="pf.heading">Portfolio — 내 자산 확인</span></h2>
+    <p data-i18n="pf.body">Portfolio 탭에서는 내 자산과 보유 중인 포지션을 한눈에 볼 수 있습니다.</p>
+    <ul>
+      <li data-i18n="pf.li1">전체 자산과 손익(수익·손실)을 확인할 수 있습니다.</li>
+      <li data-i18n="pf.li2">보유 포지션을 누르면 상세 내용을 보거나 종료할 수 있습니다.</li>
+    </ul>
+    <div class="phone-pair">
+      <figure class="phone"><img src="images/scr-401.png" alt="Portfolio 화면" data-i18n-alt="pf.alt1" loading="lazy"></figure>
+      <figure class="phone"><img src="images/scr-402.png" alt="Portfolio 상세 화면" data-i18n-alt="pf.alt2" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <!-- ⑤ Profile -->
+  <section id="sec-profile">
+    <h2><span class="sec-num">5</span> <span data-i18n="pr.heading">Profile — 설정 관리</span></h2>
+    <p data-i18n="pr.body">Profile 탭에서는 계정과 앱 설정을 관리합니다.</p>
+    <ul>
+      <li data-i18n="pr.li1">Connect Exchange — 거래소를 추가로 연결하거나 관리합니다.</li>
+      <li data-i18n="pr.li2">Notifications — 알림을 켜고 끕니다.</li>
+      <li data-i18n="pr.li3">앱 설치 메뉴에서 '홈 화면에 추가' 안내를 다시 볼 수 있습니다.</li>
+    </ul>
+    <figure class="phone"><img src="images/scr-403.png" alt="Profile 설정 화면" data-i18n-alt="pr.alt" loading="lazy"></figure>
+  </section>
+
+  <!-- ⑥ 앱 설치하기 (PWA) -->
+  <section id="sec-install">
+    <h2><span class="sec-num">6</span> <span data-i18n="pwa.heading">앱 설치하기 — 홈 화면에 추가</span></h2>
+    <p data-i18n="pwa.body">Supercycl은 앱스토어에서 내려받는 앱이 아닙니다. 인터넷 브라우저에서 열고 '홈 화면에 추가'하면 일반 앱처럼 아이콘이 생기고 똑같이 사용할 수 있습니다. 사용하시는 기기에 맞는 방법을 따라 해 보세요.</p>
+    <div class="note note-info"><span class="note-icon">💡</span><p data-i18n="pwa.note">앱스토어나 플레이스토어에서 검색해도 나오지 않아요. 아래 방법으로 설치해 주세요.</p></div>
+
+    <article class="device-card">
+      <h3><span class="device-icon">📱</span><span data-i18n="pwa.safari.title">iPhone / iPad — Safari로 여는 경우</span></h3>
+      <ol class="install-steps">
+        <li data-i18n="pwa.safari.s1">화면 아래쪽 가운데의 공유 버튼(네모에 화살표 ⬆)을 누르세요.</li>
+        <li data-i18n="pwa.safari.s2">목록을 아래로 내려 '홈 화면에 추가'를 선택하세요.</li>
+        <li data-i18n="pwa.safari.s3">오른쪽 위 '추가'를 누르면 끝! 홈 화면에 Supercycl 아이콘이 생깁니다.</li>
+      </ol>
+    </article>
+
+    <article class="device-card">
+      <h3><span class="device-icon">📱</span><span data-i18n="pwa.ioschrome.title">iPhone / iPad — Chrome으로 여는 경우</span></h3>
+      <ol class="install-steps">
+        <li data-i18n="pwa.ioschrome.s1">화면 오른쪽 위의 ⋯ 메뉴를 누르고 '공유'를 선택하세요.</li>
+        <li data-i18n="pwa.ioschrome.s2">'홈 화면에 추가'를 선택하세요.</li>
+        <li data-i18n="pwa.ioschrome.s3">'추가'를 누르면 끝!</li>
+      </ol>
+      <p class="device-note" data-i18n="pwa.ioschrome.note">Safari와는 첫 단계(공유 버튼의 위치)만 다르고 나머지는 같습니다.</p>
+    </article>
+
+    <article class="device-card">
+      <h3><span class="device-icon">🤖</span><span data-i18n="pwa.android.title">Android — Chrome으로 여는 경우</span></h3>
+      <ol class="install-steps">
+        <li data-i18n="pwa.android.s1">화면에 자동으로 나타나는 설치 안내에서 'Install(설치)'을 누르세요.</li>
+        <li data-i18n="pwa.android.s2">안내가 보이지 않으면 오른쪽 위 ⋮ 메뉴에서 '앱 설치'(또는 '홈 화면에 추가')를 선택하세요.</li>
+      </ol>
+      <p class="device-note" data-i18n="pwa.android.note">Android는 버튼 한 번이면 설치됩니다.</p>
+    </article>
+
+    <div class="note note-warn"><span class="note-icon">⚠️</span><p data-i18n="pwa.warn">iPhone에서 알림(푸시)을 받으려면 iOS 16.4 이상이어야 하고, 반드시 홈 화면에 추가한 아이콘으로 열어야 합니다.</p></div>
+
+    <figure class="phone"><img src="images/scr-720.png" alt="홈 화면에 추가 안내 화면" data-i18n-alt="pwa.alt" loading="lazy"></figure>
+  </section>
+
+  <!-- FAQ -->
+  <section id="sec-faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <dl class="faq">
+      <dt data-i18n="faq1.q">거래소 연결을 건너뛰었어요. 다시 연결하려면 어떻게 하나요?</dt>
+      <dd data-i18n="faq1.a">화면 아래 Profile 탭 → 'Connect Exchange'를 누르면 언제든지 다시 연결할 수 있습니다. Trade 화면 위쪽의 연결 안내 배너를 눌러도 됩니다.</dd>
+      <dt data-i18n="faq2.q">앱스토어에서 Supercycl이 검색되지 않아요.</dt>
+      <dd data-i18n="faq2.a">Supercycl은 브라우저에서 바로 쓰는 앱이라 앱스토어에 없습니다. 위의 ⑥ 앱 설치하기 방법으로 홈 화면에 추가해 주세요.</dd>
+      <dt data-i18n="faq3.q">알림이 오지 않아요.</dt>
+      <dd data-i18n="faq3.a">Profile → Notifications에서 알림이 켜져 있는지 확인하세요. iPhone은 iOS 16.4 이상에서 홈 화면에 추가한 경우에만 알림을 받을 수 있습니다.</dd>
+    </dl>
+  </section>
+
+  <footer class="site-footer">
+    <p data-i18n="footer.help">도움이 필요하시면 Supercycl 고객센터로 문의해 주세요.</p>
+    <p class="copy">© Supercycl</p>
+  </footer>
+
+</main>
+
+<script src="assets/i18n.js"></script>
+<script src="assets/guide.js"></script>
+</body>
+</html>
