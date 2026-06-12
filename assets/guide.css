@@ -128,20 +128,22 @@ a { color: var(--accent-light); }
 
 /* ===== 화면 캡처 (폰 프레임) ===== */
 .phone { margin: 22px auto 6px; text-align: center; position: relative; }
-/* 탭 위치 안내 — 이미지 편집 없이 CSS 오버레이. --tap-y 로 세로 위치 지정 */
+/* 탭 위치 안내 — 이미지 편집 없이 CSS 오버레이. --tap-y 로 세로 위치 지정.
+ * 앱의 그린 CTA 버튼과 구분되도록 앰버 + 흰 테두리, 버튼을 가리지 않게 바로 위에 띄움 */
 .tap-label {
   position: absolute; left: 50%; top: var(--tap-y, 80%);
   transform: translate(-50%, -130%);
-  background: var(--accent-gradient); color: #06140C;
+  background: #FFC107; color: #221A00;
   font: 700 15px/1 var(--font-sans);
   padding: 10px 16px; border-radius: 999px; white-space: nowrap;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
   pointer-events: none;
 }
 .tap-label::after {
   content: ''; position: absolute; left: 50%; top: 100%;
   transform: translateX(-50%);
-  border: 8px solid transparent; border-top-color: var(--accent);
+  border: 8px solid transparent; border-top-color: #FFC107;
 }
 .phone img {
   width: 100%; max-width: 320px; height: auto;
