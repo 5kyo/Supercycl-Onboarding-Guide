@@ -77,7 +77,7 @@ Supercycl-Guide/
 
 - 전제: Supercycl-Mobile에서 `npm run dev` 실행 중 (`http://localhost:8080`), E2E 인증 세션 존재 (`Supercycl-Mobile/tests/e2e/.auth/default.json`).
 - 동작: `design-spec.html` 접속 → `switchViewMode('design')`으로 디자인 모드 전환 → 대상 화면 ID 목록을 순회하며 각 `#scr-XXX` 요소를 `deviceScaleFactor: 2`로 캡처 → `images/scr-XXX.png` 저장.
-- 대상 화면 (약 12장): scr-001, scr-807, scr-812, scr-801, scr-802, scr-102, scr-720, scr-301, scr-401, scr-402, scr-403 (+ 필요 시 추가).
+- 대상 화면 (11장, 전부 design-spec.html 존재 확인 완료): scr-001, scr-807, scr-812, scr-801, scr-802, scr-102, scr-720, scr-301, scr-401, scr-402, scr-403 (+ 필요 시 추가).
 - 재실행 가능하게 작성 — 목업 변경 시 `node tools/capture.mjs`로 이미지 갱신.
 - 에러 처리: 서버 미실행·인증 세션 만료 시 명확한 안내 메시지를 출력하고 중단.
 
@@ -85,7 +85,7 @@ Supercycl-Guide/
 
 - 브라우저에서 한/영 전환이 모든 텍스트(alt 포함)에 적용된다.
 - 목차 클릭 시 해당 섹션으로 스크롤되고, 고정 헤더에 현재 섹션이 표시된다.
-- 캡처 이미지 12장이 디자인 모드(Dark Pro + Mono Green) 기준으로 선명하게(2x) 들어가 있다.
+- 캡처 이미지 11장이 디자인 모드(Dark Pro + Mono Green) 기준으로 선명하게(2x) 들어가 있다.
 - 데스크톱과 모바일 폭 모두에서 레이아웃이 깨지지 않는다.
 - 기본 언어가 한국어이고, 새로고침 후에도 선택 언어가 유지된다.
 
