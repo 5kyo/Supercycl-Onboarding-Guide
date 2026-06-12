@@ -144,12 +144,13 @@ a { color: var(--accent-light); }
   border: 8px solid transparent; border-top-color: var(--accent);
 }
 .phone img {
-  width: 100%; max-width: 320px;
+  width: 100%; max-width: 320px; height: auto;
+  aspect-ratio: auto 780 / 1688;
   border-radius: 28px; border: 1px solid var(--accent-border-soft);
   box-shadow: 0 0 40px rgba(0, 230, 118, 0.12), 0 12px 32px rgba(0, 0, 0, 0.5);
 }
 .phone-pair { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
-.phone-pair .phone { margin: 22px 0 6px; }
+.phone-pair .phone { margin: 22px 0 6px; width: 280px; }
 .phone-pair .phone img { max-width: 280px; }
 
 /* ===== 기기별 설치 카드 ===== */
