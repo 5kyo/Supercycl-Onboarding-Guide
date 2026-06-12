@@ -24,9 +24,11 @@ const SCREENS = [
   'scr-802', // 연결 성공
   'scr-102', // Trade (기본 랜딩)
   'scr-720', // PWA 설치 프롬프트
-  'scr-301', // Markets
-  'scr-401', // Portfolio
-  'scr-402', // Portfolio 상세
+  'scr-401', // Markets
+  'scr-301', // Signal Intro (시그널 안내)
+  'scr-303', // Signals (시그널 목록)
+  'scr-402', // Portfolio
+  'scr-410', // PnL Analysis (Portfolio 손익 분석)
   'scr-403', // Profile
 ];
 
