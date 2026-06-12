@@ -86,13 +86,13 @@ await page.waitForTimeout(1500); // 폰트/초기 렌더 여유
 
 // 4. 디자인 모드 전환
 await page.evaluate(() => switchViewMode('design'));
-await page.waitForTimeout(500);
+await page.waitForTimeout(2200); // 디자인 모드 진입 애니메이션 (scr-001 로고 reveal 1800ms) 완료 대기
 
 // 5. 화면별 캡처
 const frame = page.locator('#app');
 for (const id of SCREENS) {
   await page.evaluate((sid) => navigateTo(sid), id);
-  await page.waitForTimeout(600); // 화면 전환 + 동적 렌더 여유
+  await page.waitForTimeout(2200); // 화면 전환 + 진입 애니메이션(최장 1800ms) 완료 대기
   const out = path.join(OUT_DIR, `${id}.png`);
   await frame.screenshot({ path: out });
   console.log(`[capture] images/${id}.png`);
