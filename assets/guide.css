@@ -127,7 +127,7 @@ a { color: var(--accent-light); }
 .note-info { background: var(--bg-elevated); border: 1px solid var(--border); }
 
 /* ===== 화면 캡처 (폰 프레임) ===== */
-.phone { margin: 22px auto 6px; text-align: center; position: relative; display: block; }
+.phone { margin: 22px auto 6px; text-align: center; position: relative; }
 /* 탭 위치 안내 — 이미지 편집 없이 CSS 오버레이. --tap-y 로 세로 위치 지정 */
 .tap-label {
   position: absolute; left: 50%; top: var(--tap-y, 80%);
@@ -192,4 +192,11 @@ a { color: var(--accent-light); }
   h1 { font-size: 28px; }
   h2 { font-size: 24px; }
   .header-inner { gap: 10px; }
+  .brand { font-size: 15px; }
 }
+
+@media (max-width: 360px) {
+  .brand-sub { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
