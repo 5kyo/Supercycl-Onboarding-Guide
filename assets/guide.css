@@ -109,10 +109,15 @@ a { color: var(--accent-light); }
 }
 .step-head { display: flex; align-items: center; gap: 16px; margin-bottom: 14px; }
 .step-badge {
-  flex: none; width: 56px; height: 56px; border-radius: 50%;   /* 스펙: 56px 원형 배지 */
-  background: var(--accent-gradient); color: #06140C;
-  font: 700 26px/56px var(--font-sans); text-align: center;
-  box-shadow: 0 0 24px var(--accent-glow);
+  /* 섹션 번호(.sec-num, 채움 원형)와 구분되는 'STEP n' 필 — 옅은 틴트 + 윤곽선 */
+  flex: none; display: inline-flex; align-items: center; gap: 7px;
+  height: 40px; padding: 0 18px; border-radius: 999px;
+  background: var(--accent-tint); border: 1px solid var(--accent-border-soft);
+  color: var(--accent); font: 700 20px/1 var(--font-sans);
+}
+.step-badge::before {
+  content: 'STEP'; font: 700 12px/1 var(--font-sans);
+  letter-spacing: 1.5px; opacity: 0.85;
 }
 
 /* ===== 안내 박스 ===== */
