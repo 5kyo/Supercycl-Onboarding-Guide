@@ -1,5 +1,5 @@
 // Supercycl 사용 가이드 — 한/영 번역 사전.
-// 브라우저: 전역 I18N / Node 테스트: module.exports
+// 브라우저: 후속 classic script 에서 I18N 으로 접근 (window.I18N 아님) / Node 테스트: module.exports
 const I18N = {
   ko: {
     'header.title': '사용 가이드',

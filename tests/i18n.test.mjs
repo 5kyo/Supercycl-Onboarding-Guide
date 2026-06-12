@@ -33,3 +33,9 @@ test('빈 번역 값이 없다', () => {
     }
   }
 });
+
+test('사전의 모든 키가 HTML 에 존재한다 (고아 키 금지)', () => {
+  for (const k of Object.keys(I18N.ko)) {
+    assert.ok(keys.includes(k), `HTML 에 없는 사전 키: ${k}`);
+  }
+});
